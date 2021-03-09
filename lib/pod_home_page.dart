@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class PodHomePage extends StatelessWidget {
   @override
@@ -22,7 +21,7 @@ class PodHomePage extends StatelessWidget {
                       Text(
                         "1",
                         style: TextStyle(
-                            color: Colors.white70,
+                            color: Colors.redAccent,
                             fontSize: 25,
                             fontStyle: FontStyle.italic,
                             fontWeight: FontWeight.bold),
@@ -37,7 +36,7 @@ class PodHomePage extends StatelessWidget {
                       ),
                       Text("1",
                           style: TextStyle(
-                              color: Colors.white60,
+                              color: Colors.red,
                               fontSize: 25,
                               fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.bold)),
@@ -121,7 +120,7 @@ class PodHomePage extends StatelessWidget {
                                   Icons.search,
                                   color: Colors.white,
                                 ),
-                                backgroundColor: Colors.blueGrey,
+                                backgroundColor: Colors.redAccent,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
@@ -138,6 +137,58 @@ class PodHomePage extends StatelessWidget {
                       endIndent: 0,
                       color: Color(0xff656872),
                       thickness: 0.8,
+                    ),
+                    SizedBox(
+                      height: 1,
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: RaisedButton(
+                            color: Colors.redAccent,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Icon(
+                              Icons.home,
+                              color: Colors.white,
+                            ),
+                            onPressed: () {
+                              //todo ホームページにとばす
+                            },
+                          ),
+                        ),
+                        Expanded(
+                          child: RaisedButton(
+                            color: Colors.redAccent,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Icon(
+                              Icons.add_circle,
+                              color: Colors.white,
+                            ),
+                            onPressed: () {
+                              //todo 音声を撮る画面に遷移
+                            },
+                          ),
+                        ),
+                        Expanded(
+                          child: RaisedButton(
+                            color: Colors.redAccent,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Icon(
+                              Icons.chat_bubble_sharp,
+                              color: Colors.white,
+                            ),
+                            onPressed: () {
+                              //todo 通知ページに遷移と通知の数を表示
+                            },
+                          ),
+                        )
+                      ],
                     ),
                   ],
                 ),
