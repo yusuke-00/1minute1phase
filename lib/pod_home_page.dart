@@ -103,6 +103,8 @@ class PodHomePage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
+                              //todo textfieldに書き換え
+                              //todo ↓ヒントテキストに変更
                               "他の人を聴いてみる...",
                               style: TextStyle(
                                 color: Color(0xffdddddd),
@@ -158,6 +160,9 @@ class PodHomePage extends StatelessWidget {
                             },
                           ),
                         ),
+                        SizedBox(
+                          width: 10,
+                        ),
                         Expanded(
                           child: RaisedButton(
                             color: Colors.redAccent,
@@ -169,9 +174,12 @@ class PodHomePage extends StatelessWidget {
                               color: Colors.white,
                             ),
                             onPressed: () {
-                              //todo 音声を撮る画面に遷移
+                              //todo 音声を撮る画面に遷移,押されている状態色つけとく
                             },
                           ),
+                        ),
+                        SizedBox(
+                          width: 10,
                         ),
                         Expanded(
                           child: RaisedButton(
@@ -187,11 +195,31 @@ class PodHomePage extends StatelessWidget {
                               //todo 通知ページに遷移と通知の数を表示
                             },
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ],
                 ),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              Row(
+                children: [
+                  Image.network(
+                    "https://pbs.twimg.com/profile_images/1346474698368958468/lJn66QeH_400x400.jpg",
+                    width: 70,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Column(
+                    children: [
+                      Text("ユーザーID"),
+                      Text("投稿内容"),
+                    ],
+                  ),
+                ],
               ),
             ],
           ),
